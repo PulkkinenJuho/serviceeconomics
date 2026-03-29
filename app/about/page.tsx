@@ -70,7 +70,7 @@ export default function AboutPage() {
             Always interested in hearing from service leaders working through
             these problems. Reach out on{" "}
             <a
-              href="https://www.linkedin.com/in/juhopulkkinen/"
+              href="https://www.linkedin.com/in/juho-pulkkinen/"
               className="text-primary underline underline-offset-4 hover:text-primary/80 transition-colors"
               target="_blank"
               rel="noopener noreferrer"
