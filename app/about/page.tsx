@@ -36,28 +36,7 @@ export default function AboutPage() {
               understand the true economics of their work. It&apos;s built from
               practice, not theory.
             </p>
-            <p>
-              This is not a vendor resource. It&apos;s not consulting marketing.
-              It&apos;s a practitioner&apos;s body of work made public — because the
-              discipline of service economics is too important to keep locked
-              behind a paywall or buried in slide decks.
-            </p>
           </div>
-        </section>
-
-        {/* How this site was built */}
-        <section className="mt-12">
-          <h2 className="text-xl font-semibold text-foreground mb-4">
-            How This Site Was Built
-          </h2>
-          <p className="text-muted-foreground leading-relaxed">
-            This site was built with AI assistance — for content research,
-            framework development, and drafting. That&apos;s stated openly because
-            it&apos;s relevant: the site is itself a demonstration of
-            AI-augmented knowledge work, which is exactly what the discipline
-            addresses. The economics of building this site are tracked using the
-            same principles it teaches.
-          </p>
         </section>
 
         {/* DigitalCore */}
