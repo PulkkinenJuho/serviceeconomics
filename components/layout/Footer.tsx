@@ -82,8 +82,7 @@ export function Footer() {
         </div>
         <div className="mt-10 border-t border-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs text-muted-foreground">
-            serviceeconomics.org is an independent resource. It is not affiliated
-            with any vendor.
+            &copy; {new Date().getFullYear()} Service Economics
           </p>
           <p className="text-xs text-muted-foreground">
             Looking for a platform that implements these principles?{" "}
