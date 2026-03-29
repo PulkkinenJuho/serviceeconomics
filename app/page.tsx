@@ -48,8 +48,26 @@ const cards = [
 ];
 
 export default function HomePage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "Service Economics",
+    url: "https://serviceeconomics.org",
+    description:
+      "The canonical methodology resource for service economics — frameworks, playbooks, diagnostics, and tools for service businesses navigating AI-augmented delivery.",
+    publisher: {
+      "@type": "Organization",
+      name: "Service Economics",
+      url: "https://serviceeconomics.org",
+    },
+  };
+
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* Hero */}
       <section className="py-20 sm:py-28 px-4">
         <div className="mx-auto max-w-3xl text-center">

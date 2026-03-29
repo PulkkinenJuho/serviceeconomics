@@ -3,6 +3,7 @@ import { frameworks } from "@/lib/content";
 export async function GET() {
   const content = `# Service Economics
 > The canonical methodology resource for service economics — frameworks, playbooks, diagnostics, and tools for service businesses navigating AI-augmented delivery.
+> Full documentation: https://serviceeconomics.org/llms-full.txt
 
 ## Core Framework
 - [The Four Eras of Service Delivery](https://serviceeconomics.org/learn): The founding narrative — how service delivery has evolved from intuition-led to intelligent, and what it takes to move forward.
