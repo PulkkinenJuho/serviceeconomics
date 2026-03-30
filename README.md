@@ -10,9 +10,9 @@ An independent methodology resource for service leaders navigating the shift fro
 
 ## Site Structure
 
-- **Learn** — The Four Eras of Service Delivery narrative
-- **Frameworks** — 7 named models (Service Economics Stack, Maturity Model, Delivery Composition Triangle, Engagement Health Matrix, Margin Erosion Waterfall, Utilisation Paradox Curve, AI Value Governance Map)
-- **Tools** — Interactive Maturity Diagnostic (10-question self-assessment)
+- **Learn** — The Three Gaps: why service businesses earn less than they should
+- **Frameworks** — 8 named models (The Three Gaps, Maturity Model, Engagement Health Matrix, Utilisation Paradox Curve, Service Economics Stack, Margin Erosion Waterfall, Delivery Composition Triangle, AI Value Governance Map)
+- **Tools** — Three Gaps Assessment (9-question), Maturity Diagnostic (10-question)
 - **Resources** — Playbooks (Margin Recovery, AI Cost Integration), guides, benchmark data
 - **About** — Origin, methodology, connection to DigitalCore
 

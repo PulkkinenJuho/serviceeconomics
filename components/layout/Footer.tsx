@@ -13,7 +13,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li>
                 <Link href="/learn" className="hover:text-foreground transition-colors">
-                  The Four Eras
+                  The Three Gaps
                 </Link>
               </li>
               <li>
@@ -68,6 +68,11 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/privacy" className="hover:text-foreground transition-colors">
+                  Privacy
+                </Link>
+              </li>
+              <li>
                 <a
                   href={siteConfig.links.digitalcore}
                   className="hover:text-foreground transition-colors"
@@ -81,9 +86,13 @@ export function Footer() {
           </div>
         </div>
         <div className="mt-10 border-t border-border pt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-muted-foreground">
-            &copy; {new Date().getFullYear()} Service Economics
-          </p>
+          <div className="flex items-center gap-3 text-xs text-muted-foreground">
+            <p>&copy; {new Date().getFullYear()} Service Economics</p>
+            <span aria-hidden="true">&middot;</span>
+            <Link href="/privacy" className="hover:text-foreground transition-colors">
+              Privacy
+            </Link>
+          </div>
           <p className="text-xs text-muted-foreground">
             Looking for a platform that implements these principles?{" "}
             <a
