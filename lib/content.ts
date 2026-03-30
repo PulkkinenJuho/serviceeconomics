@@ -7,12 +7,12 @@ export interface Framework {
 
 export const frameworks: Framework[] = [
   {
-    slug: "service-economics-stack",
-    title: "The Service Economics Stack",
+    slug: "three-gaps",
+    title: "The Three Gaps",
     description:
-      "From contract value to contribution margin — every cost layer named and explained.",
+      "Why service businesses systematically earn less than their revenue suggests — and the structural sequence that explains it.",
     problem:
-      "You know what you charge and roughly what you earn, but everything between contract value and contribution margin is invisible.",
+      "You know you're leaving money on the table. You can't tell anyone where. The answer isn't a reporting problem — it's a signal problem, a latency problem, and a decision problem, in that order.",
   },
   {
     slug: "maturity-model",
@@ -23,20 +23,28 @@ export const frameworks: Framework[] = [
       "You know something is wrong with how your firm manages service economics, but you can't articulate where you are or what the next step looks like.",
   },
   {
-    slug: "delivery-composition-triangle",
-    title: "The Delivery Composition Triangle",
-    description:
-      "Map where your engagements actually sit in the Human–AI–Tooling spectrum.",
-    problem:
-      "You think your delivery is mostly human. You haven't measured how much AI and tooling actually contribute — or what that blend costs.",
-  },
-  {
     slug: "engagement-health-matrix",
     title: "The Engagement Health Matrix",
     description:
       "A 2×2 that reveals your Stars, Busy Fools, Comfortable-but-Fragile, and Danger Zone engagements.",
     problem:
       "Some engagements feel busy and successful but are actually losing money. You need a way to see delivery health and financial health together.",
+  },
+  {
+    slug: "utilisation-paradox-curve",
+    title: "The Utilisation Paradox Curve",
+    description:
+      "Why pushing past 80% utilisation costs more than it earns.",
+    problem:
+      "Your firm treats higher utilisation as always better. Nobody has quantified the point where quality, rework, and burnout start eroding the gains.",
+  },
+  {
+    slug: "service-economics-stack",
+    title: "The Service Economics Stack",
+    description:
+      "From contract value to contribution margin — every cost layer named and explained.",
+    problem:
+      "You know what you charge and roughly what you earn, but everything between contract value and contribution margin is invisible.",
   },
   {
     slug: "margin-erosion-waterfall",
@@ -47,12 +55,12 @@ export const frameworks: Framework[] = [
       "You know your margin isn't where it should be, but you can't see which cost layers are eating into it the most.",
   },
   {
-    slug: "utilisation-paradox-curve",
-    title: "The Utilisation Paradox Curve",
+    slug: "delivery-composition-triangle",
+    title: "The Delivery Composition Triangle",
     description:
-      "Why pushing past 80% utilisation costs more than it earns.",
+      "Map where your engagements actually sit in the Human–AI–Tooling spectrum.",
     problem:
-      "Your firm treats higher utilisation as always better. Nobody has quantified the point where quality, rework, and burnout start eroding the gains.",
+      "You think your delivery is mostly human. You haven't measured how much AI and tooling actually contribute — or what that blend costs.",
   },
   {
     slug: "ai-value-governance-map",

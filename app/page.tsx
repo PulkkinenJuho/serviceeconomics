@@ -27,8 +27,8 @@ const cards = [
   {
     title: "Diagnostics",
     description:
-      "Self-assessments to find out where your firm has gaps.",
-    href: "/tools/maturity-diagnostic",
+      "Self-assessments to find out which gap your firm is stuck in.",
+    href: "/tools/three-gaps-assessment",
     icon: BarChart3,
   },
   {
@@ -88,38 +88,42 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The Four Eras — visual */}
+      {/* The Three Gaps — visual */}
       <section className="py-16 px-4 bg-muted/40">
         <div className="mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 sm:grid-cols-4 gap-4 text-center">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-center">
             {[
               {
-                era: "Era 1",
-                title: "Intuition-Led",
-                quote: '"We know our clients"',
+                gap: "Gap 1",
+                title: "The Signal Gap",
+                quote: '"We don\'t know which signals to watch"',
+                color: "text-red-600 dark:text-red-400",
+                borderColor: "border-red-500/20",
+                bgColor: "bg-red-500/5",
               },
               {
-                era: "Era 2",
-                title: "Data-Driven",
-                quote: '"We track metrics"',
+                gap: "Gap 2",
+                title: "The Latency Gap",
+                quote: '"We see problems 4–6 weeks too late"',
+                color: "text-amber-600 dark:text-amber-400",
+                borderColor: "border-amber-500/20",
+                bgColor: "bg-amber-500/5",
               },
               {
-                era: "Era 3",
-                title: "AI-Augmented",
-                quote: '"We use AI but don\'t know what it costs"',
-              },
-              {
-                era: "Era 4",
-                title: "Intelligent Services",
-                quote: '"Our services self-diagnose and adapt"',
+                gap: "Gap 3",
+                title: "The Decision Gap",
+                quote: '"We see problems but can\'t act fast enough"',
+                color: "text-blue-600 dark:text-blue-400",
+                borderColor: "border-blue-500/20",
+                bgColor: "bg-blue-500/5",
               },
             ].map((item, i) => (
               <div
-                key={item.era}
-                className="relative rounded-lg border border-border bg-background p-6"
+                key={item.gap}
+                className={`relative rounded-lg border ${item.borderColor} ${item.bgColor} bg-background p-6`}
               >
-                <div className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                  {item.era}
+                <div className={`text-xs font-medium ${item.color} uppercase tracking-wider`}>
+                  {item.gap}
                 </div>
                 <div className="mt-2 text-lg font-semibold text-foreground">
                   {item.title}
@@ -127,7 +131,7 @@ export default function HomePage() {
                 <p className="mt-2 text-sm text-muted-foreground italic">
                   {item.quote}
                 </p>
-                {i < 3 && (
+                {i < 2 && (
                   <div className="hidden sm:block absolute -right-3 top-1/2 -translate-y-1/2 text-muted-foreground">
                     &rarr;
                   </div>
@@ -136,15 +140,15 @@ export default function HomePage() {
             ))}
           </div>
           <p className="mt-6 text-center text-sm text-muted-foreground">
-            Most service firms are somewhere in Era 2 or 3. The discipline exists
-            to move them forward.
+            The sequence is fixed: Signal &rarr; Latency &rarr; Decision. You
+            cannot skip a gap.
           </p>
           <div className="mt-4 text-center">
             <Link
-              href="/tools/maturity-diagnostic"
+              href="/tools/three-gaps-assessment"
               className="text-sm font-medium text-primary hover:underline"
             >
-              Find out where you are &rarr;
+              Find out which gap your firm is stuck in &rarr;
             </Link>
           </div>
         </div>
@@ -189,61 +193,44 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* The Service Economics Stack */}
+      {/* The Three Gaps — evidence */}
       <section className="py-20 px-4">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-2xl font-bold text-foreground text-center mb-8">
-            The Service Economics Stack
+            The Cost of the Three Gaps
           </h2>
-          <div className="rounded-lg border border-border overflow-hidden text-sm">
-            {[
-              { label: "Contract Value", desc: "What you charge" },
-              {
-                label: "Human Delivery Cost",
-                desc: "Hours × fully-loaded rate",
-              },
-              {
-                label: "AI Delivery Cost",
-                desc: "Tokens, API calls, model usage",
-              },
-              { label: "Tooling Cost", desc: "SaaS, platforms, per-seat" },
-              { label: "Gross Margin", desc: "What's left after delivery" },
-              {
-                label: "SLA / Penalty Exposure",
-                desc: "Financial risk from performance",
-              },
-              {
-                label: "Governance Overhead",
-                desc: "Decision, oversight, compliance cost",
-              },
-              {
-                label: "Contribution Margin",
-                desc: "True per-engagement economics",
-              },
-            ].map((row, i) => (
-              <div
-                key={row.label}
-                className={`flex items-center justify-between px-6 py-3 ${
-                  i % 2 === 0 ? "bg-muted/40" : "bg-background"
-                }`}
-              >
-                <span className="font-medium text-foreground">{row.label}</span>
-                <span className="text-muted-foreground text-right">
-                  {row.desc}
-                </span>
+          <div className="space-y-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+              <div className="rounded-lg border border-border p-5 text-center">
+                <div className="text-3xl font-bold text-foreground">60–70%</div>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  of economic signals go unmonitored in the average service firm
+                </p>
               </div>
-            ))}
+              <div className="rounded-lg border border-border p-5 text-center">
+                <div className="text-3xl font-bold text-foreground">4–6 wks</div>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  average visibility lag from problem formation to P&amp;L
+                </p>
+              </div>
+              <div className="rounded-lg border border-border p-5 text-center">
+                <div className="text-3xl font-bold text-foreground">4%+</div>
+                <p className="mt-2 text-sm text-muted-foreground">
+                  of topline revenue lost annually to slow decisions
+                </p>
+              </div>
+            </div>
           </div>
           <p className="mt-6 text-center text-muted-foreground text-sm">
-            Most firms only know the top and bottom. Everything in between is
-            invisible. That invisibility is where value leaks.
+            The gaps compound. A signal you don&apos;t watch leaks margin you
+            don&apos;t see on a timeline you can&apos;t act within.
           </p>
           <div className="mt-4 text-center">
             <Link
-              href="/frameworks/service-economics-stack"
+              href="/learn"
               className="text-sm font-medium text-primary hover:underline"
             >
-              Explore the full framework &rarr;
+              Read the full Three Gaps analysis &rarr;
             </Link>
           </div>
         </div>
@@ -256,11 +243,11 @@ export default function HomePage() {
             Ready to understand your service economics?
           </h2>
           <p className="text-muted-foreground mb-8">
-            Start with the foundational narrative — the Four Eras of Service
-            Delivery — and discover where your firm stands today.
+            Start with the Three Gaps — the structural sequence that explains
+            why service businesses earn less than they should.
           </p>
           <Link href="/learn" className={cn(buttonVariants({ size: "lg" }))}>
-            Read the Four Eras
+            Understand the Three Gaps
             <ArrowRight className="ml-2 h-4 w-4" />
           </Link>
         </div>

@@ -6,8 +6,8 @@ export async function GET() {
 > Full documentation: https://serviceeconomics.org/llms-full.txt
 
 ## Core Framework
-- [The Four Eras of Service Delivery](https://serviceeconomics.org/learn): The founding narrative — how service delivery has evolved from intuition-led to intelligent, and what it takes to move forward.
-- [The Service Economics Stack](https://serviceeconomics.org/frameworks/service-economics-stack): The foundational visual — from contract value to contribution margin, every layer named and explained.
+- [The Three Gaps](https://serviceeconomics.org/learn): The founding intellectual contribution — why service businesses earn less than they should. Three structural gaps (Signal, Latency, Decision) form a causal sequence that explains margin erosion.
+- [The Three Gaps Assessment](https://serviceeconomics.org/tools/three-gaps-assessment): 9-question diagnostic to identify which gap is costing your firm the most.
 
 ## Frameworks
 ${frameworks.map((f) => `- [${f.title}](https://serviceeconomics.org/frameworks/${f.slug}): ${f.description}`).join("\n")}
@@ -17,6 +17,7 @@ ${frameworks.map((f) => `- [${f.title}](https://serviceeconomics.org/frameworks/
 - [The AI Cost Integration Playbook](https://serviceeconomics.org/resources/playbooks/ai-cost-integration): For when your team uses AI tools but you have no idea what they're costing per client. Audit, track, and integrate AI costs into engagement pricing.
 
 ## Tools & Diagnostics
+- [Three Gaps Assessment](https://serviceeconomics.org/tools/three-gaps-assessment): 9-question self-assessment identifying your firm's weakest gap — Signal, Latency, or Decision.
 - [Service Economics Maturity Diagnostic](https://serviceeconomics.org/tools/maturity-diagnostic): 10-question self-assessment placing your firm on the maturity model.
 
 ## Key Definitions

@@ -16,6 +16,13 @@ export const metadata: Metadata = {
 
 const diagnostics = [
   {
+    title: "Three Gaps Assessment",
+    description:
+      "9 questions. Find out which gap — Signal, Latency, or Decision — is costing your firm the most.",
+    href: "/tools/three-gaps-assessment",
+    icon: Activity,
+  },
+  {
     title: "Service Economics Maturity Diagnostic",
     description:
       "10 questions. Scored result. Places you on the Maturity Model.",
