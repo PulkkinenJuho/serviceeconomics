@@ -9,9 +9,9 @@ import {
 import { ArrowRight, FileText, Activity, Calculator } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Tools",
+  title: "Free Service Economics Tools & Diagnostics",
   description:
-    "Free tools, templates, diagnostics, and calculators for service economics. No email required for most tools.",
+    "Free diagnostic assessments, templates, and calculators for professional services firms. Find your biggest margin gap, assess maturity, and calculate true delivery cost. No email required.",
 };
 
 const diagnostics = [

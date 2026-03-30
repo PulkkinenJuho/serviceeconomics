@@ -9,9 +9,9 @@ import {
 import { ArrowRight } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Resources",
+  title: "Service Economics Resources — Playbooks, Guides & Benchmarks",
   description:
-    "Playbooks, guides, and benchmark data for service economics practitioners. Structured depth — not a blog.",
+    "Step-by-step playbooks for margin recovery and AI cost integration. Benchmark data for professional services firms. Free, structured resources — not a blog.",
 };
 
 const playbooks = [

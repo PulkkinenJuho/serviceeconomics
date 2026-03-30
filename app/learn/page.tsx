@@ -11,8 +11,46 @@ export const metadata: Metadata = {
 };
 
 export default function LearnPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline:
+      "The Three Gaps: Why Service Businesses Earn Less Than They Should",
+    description:
+      "The founding document of Service Economics. Three structural gaps — Signal, Latency, and Decision — form a causal sequence that explains why professional services firms systematically underperform on margin.",
+    author: {
+      "@type": "Organization",
+      name: "Service Economics",
+      url: "https://serviceeconomics.org",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Service Economics",
+      url: "https://serviceeconomics.org",
+    },
+    datePublished: "2025-03-01",
+    dateModified: "2026-03-30",
+    mainEntityOfPage: "https://serviceeconomics.org/learn",
+    keywords: [
+      "service economics",
+      "three gaps",
+      "signal gap",
+      "latency gap",
+      "decision gap",
+      "professional services margin",
+      "service delivery cost",
+      "engagement profitability",
+      "revenue leakage professional services",
+      "AI delivery cost visibility",
+    ],
+  };
+
   return (
     <div className="py-16 px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-3xl">
         {/* Title */}
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
@@ -573,6 +611,14 @@ export default function LearnPage() {
                 className="text-primary hover:underline"
               >
                 The Margin Recovery Playbook &rarr;
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/learn/service-visibility-without-enterprise-platforms"
+                className="text-primary hover:underline"
+              >
+                Service Visibility Without Enterprise Platforms &rarr;
               </Link>
             </li>
           </ul>

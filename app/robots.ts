@@ -13,5 +13,6 @@ export default function robots(): MetadataRoute.Robots {
       },
     ],
     sitemap: "https://serviceeconomics.org/sitemap.xml",
+    host: "https://serviceeconomics.org",
   };
 }

@@ -48,26 +48,77 @@ const cards = [
 ];
 
 export default function HomePage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "Service Economics",
-    url: "https://serviceeconomics.org",
-    description:
-      "The canonical methodology resource for service economics — frameworks, playbooks, diagnostics, and tools for service businesses navigating AI-augmented delivery.",
-    publisher: {
-      "@type": "Organization",
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
       name: "Service Economics",
       url: "https://serviceeconomics.org",
+      description:
+        "The canonical methodology resource for service economics — frameworks, playbooks, diagnostics, and tools for service businesses navigating AI-augmented delivery.",
+      publisher: {
+        "@type": "Organization",
+        name: "Service Economics",
+        url: "https://serviceeconomics.org",
+      },
     },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: [
+        {
+          "@type": "Question",
+          name: "What is service economics?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Service economics is the discipline of knowing what your services actually cost — and what to do about it. It provides frameworks, diagnostics, and playbooks for professional services firms to close the gap between revenue and margin by improving cost visibility, decision speed, and AI delivery cost attribution.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Why are professional services margins declining?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Professional services EBITDA margins compressed to 9.8% in 2024. The root cause is structural: three gaps — Signal, Latency, and Decision — form a causal sequence. Firms don't know which economic signals to watch (60–70% go unmonitored), data arrives 4–6 weeks late, and no structured process exists to act on problems in time.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "What are the Three Gaps in service economics?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "The Three Gaps are: (1) The Signal Gap — not knowing which economic signals matter, so reporting never surfaces them. (2) The Latency Gap — even right signals arrive 4–6 weeks too late to act on. (3) The Decision Gap — even with timely data, no structured mechanism turns signal into action the same week. The sequence is fixed: Signal → Latency → Decision.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "How do I track AI delivery costs per engagement?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Most firms bury AI costs in 'software' or 'overhead' line items with no attribution to engagements. The AI Cost Integration Playbook provides a step-by-step process: audit all AI tools and spend, attribute costs to specific engagements using logs or token tracking, calculate per-engagement AI cost, then integrate into future pricing.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Do I need expensive enterprise software like ServiceNow?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "No. Many mid-size service firms already have the data they need across existing tools — PSA, ERP, CRM, and time systems. The problem isn't the tooling, it's the gap between systems. Service economics focuses on closing that gap: defining the right signals, reducing visibility lag, and building decision processes — regardless of which platform you use.",
+          },
+        },
+      ],
+    },
+  ];
 
   return (
     <div>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
+      {jsonLd.map((schema, i) => (
+        <script
+          key={i}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
+      ))}
       {/* Hero */}
       <section className="py-20 sm:py-28 px-4">
         <div className="mx-auto max-w-3xl text-center">
@@ -232,6 +283,52 @@ export default function HomePage() {
             >
               Read the full Three Gaps analysis &rarr;
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ — targets question-based searches */}
+      <section className="py-20 px-4">
+        <div className="mx-auto max-w-3xl">
+          <h2 className="text-2xl font-bold text-foreground text-center mb-10">
+            Frequently Asked Questions
+          </h2>
+          <div className="space-y-6">
+            {[
+              {
+                q: "What is service economics?",
+                a: "Service economics is the discipline of knowing what your services actually cost — and what to do about it. It provides frameworks, diagnostics, and playbooks for professional services firms to close the gap between revenue and margin.",
+              },
+              {
+                q: "Why are professional services margins declining?",
+                a: "EBITDA margins hit 9.8% in 2024 — the lowest in five years. The root cause is structural: firms don't know which signals to watch, data arrives 4–6 weeks late, and no structured process turns insight into action fast enough.",
+              },
+              {
+                q: "What are the Three Gaps?",
+                a: "The Signal Gap (not watching the right things), the Latency Gap (seeing problems too late), and the Decision Gap (no mechanism to act fast). They form a strict sequence — you can't skip ahead.",
+              },
+              {
+                q: "How do I track AI costs per client engagement?",
+                a: "Most firms bury AI costs in 'software' or 'overhead' with no engagement attribution. Our AI Cost Integration Playbook walks you through auditing, attributing, and pricing AI delivery costs step by step.",
+              },
+              {
+                q: "Do I need expensive enterprise tools to do this?",
+                a: "No. Most mid-size firms already have the data — it's scattered across PSA, ERP, CRM, and time systems. The problem isn't tooling, it's the gap between systems. Service economics focuses on closing that gap.",
+              },
+            ].map((faq) => (
+              <details
+                key={faq.q}
+                className="group rounded-lg border border-border p-5"
+              >
+                <summary className="cursor-pointer text-foreground font-medium list-none flex items-center justify-between">
+                  {faq.q}
+                  <span className="ml-2 text-muted-foreground group-open:rotate-45 transition-transform text-lg">+</span>
+                </summary>
+                <p className="mt-3 text-muted-foreground leading-relaxed">
+                  {faq.a}
+                </p>
+              </details>
+            ))}
           </div>
         </div>
       </section>

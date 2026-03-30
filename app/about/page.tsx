@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "About",
+  title: "About Service Economics",
   description:
-    "Who built Service Economics, why this resource exists, and its relationship to DigitalCore.",
+    "Built by a service leader and AI governance practitioner. Independent methodology resource for professional services — not vendor marketing. Connected to the DigitalCore platform.",
 };
 
 export default function AboutPage() {

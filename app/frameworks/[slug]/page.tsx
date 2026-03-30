@@ -30,8 +30,31 @@ export default async function FrameworkPage({
   const fw = getFramework(slug);
   if (!fw) notFound();
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: fw.title,
+    description: fw.description,
+    author: {
+      "@type": "Organization",
+      name: "Service Economics",
+      url: "https://serviceeconomics.org",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Service Economics",
+      url: "https://serviceeconomics.org",
+    },
+    mainEntityOfPage: `https://serviceeconomics.org/frameworks/${slug}`,
+    keywords: ["service economics", fw.title.toLowerCase(), "professional services frameworks"],
+  };
+
   return (
     <div className="py-16 px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-3xl">
         <Link
           href="/frameworks"

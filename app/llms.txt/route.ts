@@ -9,6 +9,9 @@ export async function GET() {
 - [The Three Gaps](https://serviceeconomics.org/learn): The founding intellectual contribution — why service businesses earn less than they should. Three structural gaps (Signal, Latency, Decision) form a causal sequence that explains margin erosion.
 - [The Three Gaps Assessment](https://serviceeconomics.org/tools/three-gaps-assessment): 9-question diagnostic to identify which gap is costing your firm the most.
 
+## Guides
+- [Service Visibility Without Enterprise Platforms](https://serviceeconomics.org/learn/service-visibility-without-enterprise-platforms): Why mid-size firms don't need ServiceNow or similar enterprise platforms to gain cost visibility — and what they need instead.
+
 ## Frameworks
 ${frameworks.map((f) => `- [${f.title}](https://serviceeconomics.org/frameworks/${f.slug}): ${f.description}`).join("\n")}
 

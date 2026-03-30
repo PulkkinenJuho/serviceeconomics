@@ -9,14 +9,36 @@ import {
 import { frameworks } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Frameworks",
+  title: "Service Economics Frameworks — Models for Service Profitability",
   description:
-    "Named visual frameworks for the core concepts of service economics. The canonical reference library for service business leaders.",
+    "8 named visual frameworks for understanding service delivery costs, margin erosion, and AI economics. Free reference library for professional services leaders managing blended delivery.",
 };
 
 export default function FrameworksPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    name: "Service Economics Frameworks",
+    description:
+      "8 named visual frameworks for understanding service delivery costs, margin erosion, and AI economics.",
+    url: "https://serviceeconomics.org/frameworks",
+    mainEntity: {
+      "@type": "ItemList",
+      itemListElement: frameworks.map((fw, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: fw.title,
+        url: `https://serviceeconomics.org/frameworks/${fw.slug}`,
+      })),
+    },
+  };
+
   return (
     <div className="py-16 px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-5xl">
         <h1 className="text-3xl sm:text-4xl font-bold tracking-tight text-foreground">
           Frameworks

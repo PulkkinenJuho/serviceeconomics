@@ -2,14 +2,34 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The AI Cost Integration Playbook",
+  title: "AI Cost Integration Playbook — Track What AI Actually Costs Per Client",
   description:
-    "For when your team uses AI tools but you have no idea what they're costing per client. A step-by-step process for auditing, tracking, and integrating AI costs.",
+    "Step-by-step process for auditing, attributing, and integrating AI delivery costs into engagement pricing. For professional services firms using AI tools without cost visibility.",
 };
 
 export default function AiCostIntegrationPlaybook() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "AI Cost Integration Playbook — Track What AI Actually Costs Per Client",
+    description:
+      "Step-by-step process for auditing, attributing, and integrating AI delivery costs into engagement pricing.",
+    step: [
+      { "@type": "HowToStep", name: "Audit AI tools and spend", text: "Inventory all AI tools, APIs, and services used in delivery. Gather total monthly costs." },
+      { "@type": "HowToStep", name: "Attribute costs to engagements", text: "Map AI usage and cost to specific clients and engagements using logs, tokens, or time allocation." },
+      { "@type": "HowToStep", name: "Calculate per-engagement AI cost", text: "Compute actual AI cost per engagement and compare to what was priced or assumed." },
+      { "@type": "HowToStep", name: "Integrate into pricing", text: "Build AI cost visibility into future engagement pricing, proposals, and margin tracking." },
+    ],
+    author: { "@type": "Organization", name: "Service Economics", url: "https://serviceeconomics.org" },
+    mainEntityOfPage: "https://serviceeconomics.org/resources/playbooks/ai-cost-integration",
+  };
+
   return (
     <div className="py-16 px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-3xl">
         <Link
           href="/resources"

@@ -32,8 +32,7 @@ export default function PrivacyPage() {
             </h2>
             <p>
               This site uses{" "}
-              <strong className="text-foreground">Google Analytics 4</strong>{" "}
-              (measurement ID: G-1DEKX9HYFW) to understand how visitors use the
+              <strong className="text-foreground">Google Analytics 4</strong> to understand how visitors use the
               site — which pages are visited, how long people stay, and where
               traffic comes from. This helps us improve the content.
             </p>

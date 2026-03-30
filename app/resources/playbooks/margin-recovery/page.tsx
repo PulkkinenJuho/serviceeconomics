@@ -2,14 +2,34 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "The Margin Recovery Playbook",
+  title: "Margin Recovery Playbook — Fix Losing Engagements",
   description:
-    "For when an engagement is losing money and you need to stop the bleeding. A step-by-step process for diagnosing, quantifying, and fixing margin problems.",
+    "Step-by-step process to diagnose, quantify, and fix margin problems on live engagements. For professional services teams who need to stop revenue leakage now.",
 };
 
 export default function MarginRecoveryPlaybook() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "HowTo",
+    name: "Margin Recovery Playbook — Fix Losing Engagements",
+    description:
+      "Step-by-step process to diagnose, quantify, and fix margin problems on live professional services engagements.",
+    step: [
+      { "@type": "HowToStep", name: "Diagnose the gap", text: "Identify where actual margin diverges from target margin on the engagement." },
+      { "@type": "HowToStep", name: "Quantify the leak", text: "Calculate the revenue leakage amount and identify root causes — scope creep, under-pricing, or untracked cost." },
+      { "@type": "HowToStep", name: "Intervene and fix", text: "Apply targeted fixes: renegotiate scope, adjust staffing, or reprice future phases." },
+      { "@type": "HowToStep", name: "Monitor recovery", text: "Track margin weekly to confirm the fix is holding and engagement is recovering." },
+    ],
+    author: { "@type": "Organization", name: "Service Economics", url: "https://serviceeconomics.org" },
+    mainEntityOfPage: "https://serviceeconomics.org/resources/playbooks/margin-recovery",
+  };
+
   return (
     <div className="py-16 px-4">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-3xl">
         <Link
           href="/resources"
